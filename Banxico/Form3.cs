@@ -29,11 +29,13 @@ namespace Banxico
             DateTime fechaInicio = dtpStartDate.Value.Date;
             DateTime fechaFin = dtpEndDate.Value.Date;
 
-            if (fechaInicio > fechaFin)
-            {
-                MessageBox.Show("La fecha de inicio no puede ser mayor que la fecha de fin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+             
+
+            //if (fechaInicio > fechaFin)
+            //{
+            //    MessageBox.Show("La fecha de inicio no puede ser mayor que la fecha de fin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
             // Llamar al método asíncrono correctamente
             await ObtenerDolarPorFechas(fechaInicio.ToString("yyyy-MM-dd"), fechaFin.ToString("yyyy-MM-dd"));

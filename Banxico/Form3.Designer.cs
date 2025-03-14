@@ -34,16 +34,16 @@
             label2 = new Label();
             groupBox1 = new GroupBox();
             dgvData = new DataGridView();
-            btnShow = new Button();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
+            btnShow = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
             // 
             // dtpStartDate
             // 
-            dtpStartDate.Format = DateTimePickerFormat.Short;
+            dtpStartDate.Format = DateTimePickerFormat.Custom;
             dtpStartDate.Location = new Point(103, 43);
             dtpStartDate.Name = "dtpStartDate";
             dtpStartDate.Size = new Size(124, 23);
@@ -52,7 +52,7 @@
             // 
             // dtpEndDate
             // 
-            dtpEndDate.Format = DateTimePickerFormat.Short;
+            dtpEndDate.Format = DateTimePickerFormat.Custom;
             dtpEndDate.Location = new Point(99, 86);
             dtpEndDate.Name = "dtpEndDate";
             dtpEndDate.Size = new Size(128, 23);
@@ -98,6 +98,16 @@
             dgvData.Size = new Size(297, 231);
             dgvData.TabIndex = 5;
             // 
+            // Column1
+            // 
+            Column1.HeaderText = "Date";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Dollar prize";
+            Column2.Name = "Column2";
+            // 
             // btnShow
             // 
             btnShow.Font = new Font("Yu Gothic UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -108,16 +118,6 @@
             btnShow.Text = "Show";
             btnShow.UseVisualStyleBackColor = true;
             btnShow.Click += btnShow_Click;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Date";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Dollar prize";
-            Column2.Name = "Column2";
             // 
             // Form3
             // 
