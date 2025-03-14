@@ -35,6 +35,8 @@
             groupBox1 = new GroupBox();
             dgvData = new DataGridView();
             btnShow = new Button();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
@@ -90,9 +92,10 @@
             // dgvData
             // 
             dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvData.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
             dgvData.Location = new Point(348, 68);
             dgvData.Name = "dgvData";
-            dgvData.Size = new Size(378, 231);
+            dgvData.Size = new Size(297, 231);
             dgvData.TabIndex = 5;
             // 
             // btnShow
@@ -105,6 +108,16 @@
             btnShow.Text = "Show";
             btnShow.UseVisualStyleBackColor = true;
             btnShow.Click += btnShow_Click;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Date";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Dollar prize";
+            Column2.Name = "Column2";
             // 
             // Form3
             // 
@@ -131,5 +144,7 @@
         private GroupBox groupBox1;
         private DataGridView dgvData;
         private Button btnShow;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
     }
 }
