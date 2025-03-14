@@ -41,15 +41,15 @@ namespace Banxico
 
         private void dtpStartDate_ValueChanged(object sender, EventArgs e)
         {
-            dtpStartDate.Format = DateTimePickerFormat.Custom;
-            dtpStartDate.CustomFormat = "yyyy/MM/dd";
+            //dtpStartDate.Format = DateTimePickerFormat.Custom;
+            //dtpStartDate.CustomFormat = "yyyy/MM/dd";
 
         }
 
         private void dtpEndDate_ValueChanged(object sender, EventArgs e)
         {
-            dtpEndDate.Format = DateTimePickerFormat.Custom;
-            dtpEndDate.CustomFormat = "yyyy/MM/dd";
+            //dtpEndDate.Format = DateTimePickerFormat.Custom;
+            //dtpEndDate.CustomFormat = "yyyy/MM/dd";
 
         }
 
@@ -80,9 +80,17 @@ namespace Banxico
                     // Recorrer los datos y agregarlos al DataGridView
                     foreach (var dato in series)
                     {
-                        string fecha = DateTime.ParseExact(dato["fecha"].ToString(), "yyyy-MM-dd", null).ToString("dd/MM/yyyy");
+                        // El formato correcto de la fecha desde la API es 'yyyy-MM-dd'
+                        string fechaApi = dato["fecha"].ToString();
+
+                        // Convierte la fecha de la API al formato correcto
+                        DateTime fecha = DateTime.ParseExact(fechaApi, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+
+                        // Formatea la fecha a 'dd/MM/yyyy' para mostrar en el DataGridView
+                        string fechaFormateada = fecha.ToString("dd/MM/yyyy");
+
                         string valor = dato["dato"].ToString();
-                        dgvData.Rows.Add(fecha, valor);
+                        dgvData.Rows.Add(fechaFormateada, valor);
                     }
                 }
                 else
