@@ -8,7 +8,7 @@ namespace Banxico
         {
             InitializeComponent();
             User = "Odeth";
-            Pasword = "e";
+            Pasword = "e2005";
         }
 
         private void btnClose_Click(object sender, EventArgs e)
