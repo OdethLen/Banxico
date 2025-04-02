@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Banxico
 {
-    
+
     public partial class Form2 : Form
     {
-        
+
         public Form2()
         {
             InitializeComponent();
-            
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -29,6 +29,20 @@ namespace Banxico
         {
 
             Form3 form = new Form3();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnGraphic_Click(object sender, EventArgs e)
+        {
+            Form4 form = new Form4();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnCarGrpahic_Click(object sender, EventArgs e)
+        {
+            automobile form = new automobile();
             form.Show();
             this.Hide();
         }

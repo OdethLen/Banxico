@@ -31,12 +31,13 @@
             btnExit = new Button();
             btnData = new Button();
             btnGraphic = new Button();
+            btnCarGrpahic = new Button();
             SuspendLayout();
             // 
             // btnExit
             // 
             btnExit.Font = new Font("Yu Gothic UI", 9.75F);
-            btnExit.Location = new Point(241, 87);
+            btnExit.Location = new Point(140, 75);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(119, 35);
             btnExit.TabIndex = 0;
@@ -47,7 +48,7 @@
             // btnData
             // 
             btnData.Font = new Font("Yu Gothic UI", 9.75F);
-            btnData.Location = new Point(241, 142);
+            btnData.Location = new Point(140, 130);
             btnData.Name = "btnData";
             btnData.Size = new Size(119, 35);
             btnData.TabIndex = 1;
@@ -58,18 +59,31 @@
             // btnGraphic
             // 
             btnGraphic.Font = new Font("Yu Gothic UI", 9.75F);
-            btnGraphic.Location = new Point(241, 202);
+            btnGraphic.Location = new Point(140, 190);
             btnGraphic.Name = "btnGraphic";
             btnGraphic.Size = new Size(119, 35);
             btnGraphic.TabIndex = 2;
             btnGraphic.Text = "Graphic";
             btnGraphic.UseVisualStyleBackColor = true;
+            btnGraphic.Click += btnGraphic_Click;
+            // 
+            // btnCarGrpahic
+            // 
+            btnCarGrpahic.Font = new Font("Yu Gothic UI", 9.75F);
+            btnCarGrpahic.Location = new Point(317, 75);
+            btnCarGrpahic.Name = "btnCarGrpahic";
+            btnCarGrpahic.Size = new Size(119, 35);
+            btnCarGrpahic.TabIndex = 3;
+            btnCarGrpahic.Text = "Car Graphic";
+            btnCarGrpahic.UseVisualStyleBackColor = true;
+            btnCarGrpahic.Click += btnCarGrpahic_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(600, 326);
+            Controls.Add(btnCarGrpahic);
             Controls.Add(btnGraphic);
             Controls.Add(btnData);
             Controls.Add(btnExit);
@@ -83,5 +97,6 @@
         private Button btnExit;
         private Button btnData;
         private Button btnGraphic;
+        private Button btnCarGrpahic;
     }
 }
